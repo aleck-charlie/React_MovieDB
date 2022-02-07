@@ -12,7 +12,7 @@ export default function SearchMovies() {
   const searchMovies = async (e) => {
     e.preventDefault();
 
-    const url = `https://api.themoviedb.org/3/movie/550?api_key=7614f64dc9adcab1b7193a3617d9f951&language=en-US&query=${query}&page=1&include_adult=false`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=7614f64dc9adcab1b7193a3617d9f951&language=en-US&query=${query}&page=1&include_adult=false`;
 
     try {
       const res = await fetch(url);
