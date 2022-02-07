@@ -41,8 +41,8 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
-
       <div className="card-list">
+      {movies.map(movie => movie.title)}
       </div>
     </>
   );
