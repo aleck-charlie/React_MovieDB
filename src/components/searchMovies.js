@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "../../src/styles.css";
+import MovieCards from "../components/movieCards";
+
 
 export default function SearchMovies() {
-  // states - input query, movies
+
   const [query, setQuery] = useState("");
-  //useState('') initial value is an empty string
-  //useState is a function that will update state. setQuery is
-  // a function that will update query.
-  // This is a form of array destructuring
   const [movies, setMovies] = useState([]);
 
   const searchMovies = async (e) => {
@@ -42,24 +40,11 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
-
       <div className="card-list">
-                {movies.filter(movie => movie.poster_path).map(movie => (
-                    <div className="card" key={movie.id}>
-                        <img className="card--image"
-                            src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
-                            alt={movie.title + 'poster'}
-                            />
-                        <div className="card--content">
-                        <h3 className="card--title">{movie.title}</h3>
-                        <p><small>RELEASE DATE: {movie.release_date}</small></p>
-                        <p><small>RATING: {movie.vote_average}</small></p>
-                        <p className="card--desc">{movie.overview}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>    
-
+      {movies.filter((movie) => movie.poster_path).map((movie) => (
+        <MovieCards movie={movie} key={movie.id}/>
+      ))}
+      </div>
     </>
   );
 }

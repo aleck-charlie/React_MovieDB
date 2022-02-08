@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import SearchMovies from "../src/SearchMovies";
+import SearchMovies from "../src/components/searchMovies";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
