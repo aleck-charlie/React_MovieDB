@@ -25,9 +25,10 @@ export default function SearchMovies() {
 
   return (
     <>
+      <h1>Movie Search</h1>
       <form className="form" onSubmit={searchMovies}>
         <label className="label" htmlFor="query">
-          Movie Name
+          <p>Look up movies by name!</p>
         </label>
         <input
           className="input"
