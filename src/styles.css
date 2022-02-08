@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -28,18 +29,19 @@ small {
 }
 
 .title {
-  font-size: 4.4rem;
+  font-size: 4rem;
   text-align: center;
 }
 
 .form {
   display: grid;
+  align-content: center;
+  padding: 3rem;
 }
 
 .label {
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
-  text-transform: uppercase;
 }
 
 .input {
@@ -89,5 +91,16 @@ small {
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
   margin-bottom: 2rem;
+  margin: 4rem 4rem;
   background-color: white;
+}
+
+.card--title {
+  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+}
+
+.card--image {
+  margin: 0 auto;
+  display: block;
 }

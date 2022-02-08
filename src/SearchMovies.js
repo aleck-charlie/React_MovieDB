@@ -26,10 +26,9 @@ export default function SearchMovies() {
 
   return (
     <>
-      <h1>Movie Search</h1>
       <form className="form" onSubmit={searchMovies}>
         <label className="label" htmlFor="query">
-          <p>Look up movies by name!</p>
+          <p>Start looking up movies by name!</p>
         </label>
         <input
           className="input"
@@ -43,6 +42,7 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
+
       <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (
                     <div className="card" key={movie.id}>
