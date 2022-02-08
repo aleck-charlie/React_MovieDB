@@ -55,10 +55,10 @@ export default function SearchMovies() {
                         <p><small>RATING: {movie.vote_average}</small></p>
                         <p className="card--desc">{movie.overview}</p>
                         </div>
-
                     </div>
                 ))}
             </div>    
+
     </>
   );
 }
